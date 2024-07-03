@@ -37,12 +37,12 @@ async def more(callback: CallbackQuery):
    await callback.message.edit_text('Вот еще:', reply_markup=await kb.more_keyboard())
 
 @dp.callback_query(F.data == 'Опция 1')
-async def option1(message: Message):
-   await message.answer("Опция 1")
+async def option1(callback: CallbackQuery):
+   await callback.message.edit_text("Опция 1")
 
 @dp.callback_query(F.data == 'Опция 2')
-async def option2(message: Message):
-   await message.answer("Опция 2")
+async def option2(callback: CallbackQuery):
+   await callback.message.edit_text("Опция 2")
 
 
 
